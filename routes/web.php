@@ -1,9 +1,15 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\ChefsController;
+use App\Http\Controllers\EventsController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\SpecialsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,33 +23,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*
-Route::get('/', function () {
-    return view('index');
-}); 
-
-Route::get("/", [Controller::class,'index']);
-
-*/
 
 //routes of every pages
-Route::view("/","index")->name('index.view');
-Route::view("/about","about")->name('about.view');
-//Route::view("/menu","menu")->name('menu.view');
-//Route::get("/menu", [Controller::class, 'menu'])->name('menu.view');
-Route::view("/events","events")->name('events.view');
-Route::view("/chefs","chefs")->name('chefs.view');
-Route::view("/gallery","gallery")->name('gallery.view');
-//Route::view("/contact","contact")->name('contact.view');
-Route::view("/booking","booking")->name('booking.view');
-Route::view("/specials","specials")->name('specials.view');
+Route::get("/", [IndexController::class,'index'])->name('index.view');
+Route::get("/about", [AboutController::class,'index'])->name('about.view');
+Route::get("/events", [EventsController::class,'index'])->name('events.view');
+Route::get("/chefs", [ChefsController::class,'index'])->name('chefs.view');
+Route::get("/gallery", [GalleryController::class,'index'])->name('gallery.view');
+Route::get("/specials", [SpecialsController::class,'index'])->name('specials.view');
 
-//route for contact us form
+//route for contact us view
 Route::post("/contact_us", [ContactController::class,'contact'])->name('form.contact');
 Route::get("/contact_us", [ContactController::class,'index'])->name('contact.view');
 
-//route for book a table form
+//route for book a table view
 Route::post("/book_table",[BookingController::class,'booking'])->name('form.book');
+Route::get("/book_table",[BookingController::class,'index'])->name('booking.view');
 
 //route for menu
 Route::resource("menu",MenuController::class);

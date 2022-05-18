@@ -12,4 +12,8 @@ class BookingController extends Controller
 		Booking::create($request->all());
 		return (['data'=>'Your booking is successfull!']);
 	}
+
+	public function index(){
+		return view('booking');
+	}
 }
