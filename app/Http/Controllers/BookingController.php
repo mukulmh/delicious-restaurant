@@ -10,7 +10,8 @@ class BookingController extends Controller
     public function booking(Request $request){
 		//dd($request->all());
 		Booking::create($request->all());
-		return (['data'=>'Your booking is successfull!']);
+		$message = 'Booking successfull. Thank you!';
+		return view('booking', compact('message'));
 	}
 
 	public function index(){
