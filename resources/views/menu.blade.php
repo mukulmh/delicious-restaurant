@@ -86,7 +86,7 @@
             @foreach($categories as $category)
             <li data-filter=".filter-{{ $category->category_name }}">{{ $category->category_name }}</li>
             <!--<li data-filter=".filter-salads">Salads</li>
-				<li data-filter=".filter-specialty">Specialty</li>-->
+				    <li data-filter=".filter-specialty">Specialty</li>-->
             @endforeach
           </ul>
         </div>
@@ -94,16 +94,18 @@
 
       <div class="row menu-container">
 
-        <div class="col-lg-6 menu-item filter-starters">
+        @foreach($items as $item)
+        <div class="col-lg-6 menu-item filter-{{$item->category}}">
           <div class="menu-content">
-            <a href="#">Lobster Bisque</a><span>$5.95</span>
+            <a href="#">{{$item->item_name}}</a><span>{{$item->price}}</span>
           </div>
           <div class="menu-ingredients">
-            Lorem, deren, trataro, filede, nerada
+            {{$item->description}}
           </div>
         </div>
+        @endforeach
 
-        <div class="col-lg-6 menu-item filter-specialty">
+        <!-- <div class="col-lg-6 menu-item filter-specialty">
           <div class="menu-content">
             <a href="#">Bread barrel</a><span>$6.95</span>
           </div>
@@ -173,7 +175,7 @@
           <div class="menu-ingredients">
             Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
           </div>
-        </div>
+        </div> -->
 
       </div>
 

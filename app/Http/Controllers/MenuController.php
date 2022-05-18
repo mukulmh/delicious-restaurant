@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Menu;
 
 class MenuController extends Controller
 {
@@ -15,7 +16,8 @@ class MenuController extends Controller
     public function index()
     {
         $categories = Category::all();
-		return view('menu', compact('categories'));
+        $items = Menu::all();
+		return view('menu', compact('categories','items'));
     }
 
     /**
