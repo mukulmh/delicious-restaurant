@@ -46,3 +46,6 @@ Route::resource("menu",MenuController::class);
 
 //route for admin
 Route::get("/admin", [AdminController::class,'index'])->name('admin.view');
+
+Route::get("/add_category", [AdminController::class,'addCategoryView'])->name('new.category');
+Route::post("/add_category", [AdminController::class,'addCategory'])->name('add.category');
