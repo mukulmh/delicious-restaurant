@@ -9,6 +9,6 @@ class Menu extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'item_name','desctiption','price','category'
+        'item_name','description','price','category'
     ];
 }

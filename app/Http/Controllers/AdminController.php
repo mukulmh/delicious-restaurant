@@ -28,4 +28,16 @@ class AdminController extends Controller
         Category::create($request->all());
         return view('admin/add-category');
     }
+
+    public function addItemView(){
+        $categories = Category::all();
+        return view('admin/add-item', compact('categories'));
+    }
+
+    public function addItem(Request $request)
+    {
+        Menu::create($request->all());
+        $categories = Category::all();
+        return view('admin/add-item', compact('categories'));
+    }
 }

@@ -49,3 +49,6 @@ Route::get("/admin", [AdminController::class,'index'])->name('admin.view');
 
 Route::get("/add_category", [AdminController::class,'addCategoryView'])->name('new.category');
 Route::post("/add_category", [AdminController::class,'addCategory'])->name('add.category');
+
+Route::get("/add_item", [AdminController::class,'addItemView'])->name('new.item');
+Route::post("/add_item", [AdminController::class,'addItem'])->name('add.item');

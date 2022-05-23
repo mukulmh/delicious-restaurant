@@ -57,7 +57,7 @@
             </li> -->
           <li class="nav-item">
             <a class="nav-link active" href="{{route('admin.view')}}">
-              <i class="fas fa-shopping-cart"></i> Products
+              <i class="fas fa-shopping-cart"></i> Items & Categories
             </a>
           </li>
 
@@ -80,7 +80,7 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link d-block" href="#">
+            <a class="nav-link d-block" href="{{route('index.view')}}">
               Admin, <b>Logout</b>
             </a>
           </li>
@@ -243,7 +243,7 @@
             </table>
           </div>
           <!-- table container -->
-          <a href="#" class="btn btn-primary btn-block text-uppercase mb-3">Add new item</a>
+          <a href="{{route('new.item')}}" class="btn btn-primary btn-block text-uppercase mb-3">Add new item</a>
         </div>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 tm-block-col">
