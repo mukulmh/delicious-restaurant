@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BookingController;
@@ -42,3 +43,6 @@ Route::get("/book_table",[BookingController::class,'index'])->name('booking.view
 
 //route for menu
 Route::resource("menu",MenuController::class);
+
+//route for admin
+Route::get("/admin", [AdminController::class,'index'])->name('admin.view');
