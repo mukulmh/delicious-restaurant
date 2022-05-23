@@ -446,6 +446,7 @@ input[type="checkbox"]:focus {
 .tm-product-name {
   font-size: 0.95rem;
   font-weight: 600;
+  cursor: pointer;
 }
 .tm-product-delete-icon {
   font-size: 1.1rem;
@@ -459,6 +460,7 @@ input[type="checkbox"]:focus {
   width: 40px;
   height: 40px;
   text-align: center;
+  cursor: pointer;
 }
 .tm-product-delete-link:hover .tm-product-delete-icon {
   color: #6d8ca6;

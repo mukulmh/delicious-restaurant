@@ -5,10 +5,12 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ChefsController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ItemController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SpecialsController;
 use Illuminate\Support\Facades\Route;
@@ -47,8 +49,12 @@ Route::resource("menu",MenuController::class);
 //route for admin
 Route::get("/admin", [AdminController::class,'index'])->name('admin.view');
 
-Route::get("/add_category", [AdminController::class,'addCategoryView'])->name('new.category');
-Route::post("/add_category", [AdminController::class,'addCategory'])->name('add.category');
+//route for admin panel category
+Route::get("/add_category", [CategoryController::class,'addCategoryView'])->name('new.category');
+Route::post("/add_category", [CategoryController::class,'addCategory'])->name('add.category');
+Route::delete("/delete_category/{id}",[CategoryController::class,'deleteCategory'])->name('category.delete');
 
-Route::get("/add_item", [AdminController::class,'addItemView'])->name('new.item');
-Route::post("/add_item", [AdminController::class,'addItem'])->name('add.item');
+//route for admin panel items
+Route::get("/add_item", [ItemController::class,'addItemView'])->name('new.item');
+Route::post("/add_item", [ItemController::class,'addItem'])->name('add.item');
+Route::delete("/delete_item/{id}",[ItemController::class,'deleteItem'])->name('item.delete');
