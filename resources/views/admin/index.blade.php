@@ -56,14 +56,14 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link d-block" href="{{route('index.view')}}">
+            <a class="nav-link d-block" href="{{route('logout')}}">
               Admin, <b>Logout</b>
             </a>
           </li>
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> 
   <div class="container mt-5">
     <div class="row tm-content-row">
       <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
@@ -87,7 +87,7 @@
                   <th scope="row">{{$item->id}}</th>
                   <td class="tm-product-name">{{$item->item_name}}</td>
                   <td>${{$item->price}}</td>
-                  <td>{{$item->category}}</td>
+                  <td>{{$item->category_id}}</td>
                   <td>{{$item->description}}</td>
                   <td>
                     <span onclick="document.getElementById('m-u-{{$item->id}}').submit()" class="tm-product-delete-link">

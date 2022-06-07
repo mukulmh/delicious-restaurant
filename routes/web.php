@@ -64,3 +64,7 @@ Route::resource("category",CategoryController::class);
 // Route::delete("/delete_item/{id}",[ItemController::class,'deleteItem'])->name('item.delete');
 
 Route::resource("item",ItemController::class);
+
+Route::get("/admin_login",[AdminController::class,'loginview'])->name('admin.login');
+Route::post("/login",[AdminController::class,'login'])->name('login');
+Route::get("/logout",[AdminController::class,'logout'])->name('logout');
