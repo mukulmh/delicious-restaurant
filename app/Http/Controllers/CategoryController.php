@@ -14,7 +14,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin/add-category');
     }
 
     /**
@@ -36,7 +36,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         Category::create($request->all());
-        return view('admin/add-category');
+        return redirect('/admin');
     }
 
     /**

@@ -15,7 +15,8 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        return view('admin/add-item',compact('categories'));
     }
 
     /**
