@@ -31,30 +31,6 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto h-100">
-          <!-- <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                <i class="fas fa-tachometer-alt"></i> Dashboard
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false">
-                <i class="far fa-file-alt"></i>
-                <span> Reports <i class="fas fa-angle-down"></i> </span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Daily Report</a>
-                <a class="dropdown-item" href="#">Weekly Report</a>
-                <a class="dropdown-item" href="#">Yearly Report</a>
-              </div>
-            </li> -->
           <li class="nav-item">
             <a class="nav-link active" href="{{route('admin.view')}}">
               <i class="fas fa-shopping-cart"></i> Items & Categories
@@ -92,31 +68,32 @@
     <div class="row tm-content-row">
       <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
         <div class="tm-bg-primary-dark tm-block tm-block-products">
+          <h2 class="tm-block-title">Items</h2>
           <div class="tm-product-table-container">
             <table class="table table-hover tm-table-small tm-product-table">
               <thead>
                 <tr>
-                  <th scope="col">&nbsp;</th>
+                  <th scope="col">SL</th>
                   <th scope="col">Item Name</th>
                   <th scope="col">Price</th>
                   <th scope="col">Category</th>
                   <th scope="col">Details</th>
-                  <th scope="col">&nbsp;</th>
+                  <th scope="col">Delete</th>
                 </tr>
               </thead>
               <tbody>
                 @foreach($items as $item)
                 <tr>
-                  <th scope="row"><input type="checkbox" /></th>
+                  <th scope="row">{{$item->id}}</th>
                   <td class="tm-product-name">{{$item->item_name}}</td>
-                  <td>{{$item->price}}</td>
+                  <td>${{$item->price}}</td>
                   <td>{{$item->category}}</td>
                   <td>{{$item->description}}</td>
                   <td>
-                    <span onclick="document.getElementById('d-u-{{$item->id}}').submit()" class="tm-product-delete-link">
+                    <span onclick="document.getElementById('m-u-{{$item->id}}').submit()" class="tm-product-delete-link">
                       <i class="far fa-trash-alt tm-product-delete-icon"></i>
                     </span>
-                    <form action="{{ route('item.delete',$item->id) }}" method="post" id="d-u-{{$item->id}}">
+                    <form action="{{ route('item.destroy',$item->id) }}" method="post" id="m-u-{{$item->id}}">
                       @csrf
                       @method('delete')
                     </form>
@@ -127,7 +104,7 @@
             </table>
           </div>
           <!-- table container -->
-          <a href="{{route('new.item')}}" class="btn btn-primary btn-block text-uppercase mb-3">Add new item</a>
+          <a href="{{route('item.create')}}" class="btn btn-primary btn-block text-uppercase mb-3">Add new item</a>
         </div>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 tm-block-col">
@@ -135,15 +112,25 @@
           <h2 class="tm-block-title">Categories</h2>
           <div class="tm-product-table-container">
             <table class="table table-hover tm-table-small tm-product-table">
+              <thead>
+                <tr>
+                  <th scope="col">SL</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
               <tbody>
                 @foreach($categories as $category)
                 <tr>
-                  <td class="tm-product-name">{{$category->category_name}}</td>
+                  <th scope="row">{{$category->id}}</th>
+                  <td class="tm-category-name">
+                    {{$category->category_name}}
+                  </td>
                   <td class="text-center">
-                    <span onclick="document.getElementById('d-u-{{$category->id}}').submit()" class="tm-product-delete-link">
+                    <span onclick="document.getElementById('i-u-{{$category->id}}').submit()" class="tm-product-delete-link">
                       <i class="far fa-trash-alt tm-product-delete-icon"></i>
                     </span>
-                    <form action="{{ route('category.delete',$category->id) }}" method="post" id="d-u-{{$category->id}}">
+                    <form action="{{ route('category.destroy',$category->id) }}" method="post" id="i-u-{{$category->id}}">
                       @csrf
                       @method('delete')
                     </form>
@@ -154,7 +141,7 @@
             </table>
           </div>
           <!-- table container -->
-          <a href="{{route('new.category')}}" class="btn btn-primary btn-block text-uppercase mb-3">Add new category</a>
+          <a href="{{route('category.create')}}" class="btn btn-primary btn-block text-uppercase mb-3">Add new category</a>
         </div>
       </div>
     </div>
@@ -175,8 +162,14 @@
   <!-- https://getbootstrap.com/ -->
   <script>
     $(function() {
+      $(".tm-category-name").on("click", function() {
+        window.location.href = "{{route('category.edit',$category->id)}}";
+      });
+    });
+
+    $(function() {
       $(".tm-product-name").on("click", function() {
-        window.location.href = "edit-product.html";
+        window.location.href = "#";
       });
     });
   </script>

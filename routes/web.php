@@ -50,11 +50,17 @@ Route::resource("menu",MenuController::class);
 Route::get("/admin", [AdminController::class,'index'])->name('admin.view');
 
 //route for admin panel category
-Route::get("/add_category", [CategoryController::class,'addCategoryView'])->name('new.category');
-Route::post("/add_category", [CategoryController::class,'addCategory'])->name('add.category');
-Route::delete("/delete_category/{id}",[CategoryController::class,'deleteCategory'])->name('category.delete');
+// Route::get("/add_category", [CategoryController::class,'addCategoryView'])->name('new.category');
+// Route::post("/add_category", [CategoryController::class,'addCategory'])->name('add.category');
+// Route::delete("/delete_category/{id}",[CategoryController::class,'deleteCategory'])->name('category.delete');
+// Route::get("/edit_category/{id}",[CategoryController::class,'editCategoryView'])->name('edit.category');
+
+//resource route for category
+Route::resource("category",CategoryController::class);
 
 //route for admin panel items
-Route::get("/add_item", [ItemController::class,'addItemView'])->name('new.item');
-Route::post("/add_item", [ItemController::class,'addItem'])->name('add.item');
-Route::delete("/delete_item/{id}",[ItemController::class,'deleteItem'])->name('item.delete');
+// Route::get("/add_item", [ItemController::class,'addItemView'])->name('new.item');
+// Route::post("/add_item", [ItemController::class,'addItem'])->name('add.item');
+// Route::delete("/delete_item/{id}",[ItemController::class,'deleteItem'])->name('item.delete');
+
+Route::resource("item",ItemController::class);

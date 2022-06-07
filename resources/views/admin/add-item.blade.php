@@ -77,7 +77,7 @@
           </div>
           <div class="row tm-edit-product-row">
             <div class="col-xl-6 col-lg-6 col-md-12">
-              <form action="{{route('add.item')}}" class="tm-edit-product-form" method="POST">
+              <form action="{{route('item.store')}}" class="tm-edit-product-form" method="POST">
                 @csrf
                 <div class="form-group mb-3">
                   <label for="name">Item Name
@@ -90,10 +90,10 @@
                 </div>
                 <div class="form-group mb-3">
                   <label for="category">Category</label>
-                  <select id="category" name="category" class="custom-select tm-select-accounts" id="category">
+                  <select id="category_id" name="category_id" class="custom-select tm-select-accounts" id="category_id">
                     <option selected disabled>Select category</option>
                     @foreach($categories as $category)
-                    <option value="{{$category->category_name}}">{{$category->category_name}}</option>
+                    <option value="{{$category->id}}">{{$category->category_name}}</option>
                     @endforeach
                   </select>
                 </div>

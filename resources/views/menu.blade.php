@@ -77,7 +77,7 @@
           <ul id="menu-flters">
             <li data-filter="*" class="filter-active">Show All</li>
             @foreach($categories as $category)
-            <li data-filter=".filter-{{ $category->category_name }}">{{ $category->category_name }}</li>
+            <li data-filter=".filter-{{ $category->id }}">{{ $category->category_name }}</li>
             <!--<li data-filter=".filter-salads">Salads</li>
 				    <li data-filter=".filter-specialty">Specialty</li>-->
             @endforeach
@@ -88,9 +88,9 @@
       <div class="row menu-container">
 
         @foreach($items as $item)
-        <div class="col-lg-6 menu-item filter-{{$item->category}}">
+        <div class="col-lg-6 menu-item filter-{{$item->category_id}}">
           <div class="menu-content">
-            <a href="#">{{$item->item_name}}</a><span>{{$item->price}}</span>
+            <a href="#">{{$item->item_name}}</a><span>${{$item->price}}</span>
           </div>
           <div class="menu-ingredients">
             {{$item->description}}
