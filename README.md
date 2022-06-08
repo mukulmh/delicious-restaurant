@@ -15,7 +15,7 @@ vi) MySql
 
 ## Delicious Restaurant Screenshots <br>
 ### Home page
-![alt text](https://i.ibb.co/ngJf6mp/home.png)<br>
+![alt text](https://i.ibb.co/C1Gvm8L/home.png)<br>
 ### About page
 ![alt text](https://i.ibb.co/YZPLzxs/about.png)<br>
 ### Menu page
@@ -37,4 +37,4 @@ vi) MySql
 ### Add item
 ![alt text](https://i.ibb.co/Vt7gr2g/add-item.png)<br>
 ### Edit category
-![alt text](https://i.ibb.co/2qs9nJw/edit-category.png)<br>
+![alt text](https://i.ibb.co/v1QFw9b/edit-category.png)<br>
