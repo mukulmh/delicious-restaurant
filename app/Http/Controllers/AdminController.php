@@ -6,13 +6,15 @@ use App\Models\Category;
 use App\Models\Menu;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
     public function index()
     {
-        $items = Menu::all();
+        $items = DB::table('menus')->join('categories','menus.category_id', '=', 'categories.id')->select('menus.id','menus.item_name','menus.price','menus.description','categories.category_name')->get();
+        //$items = Menu::all();
         $categories = Category::all();
         return view('admin/index', compact('items', 'categories'));
     }

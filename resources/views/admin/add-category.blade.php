@@ -38,7 +38,7 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link d-block" href="{{route('index.view')}}">
+            <a class="nav-link d-block" href="{{route('logout')}}">
               Admin, <b>Logout</b>
             </a>
           </li>

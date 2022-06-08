@@ -69,7 +69,7 @@
                   <th scope="row">{{$item->id}}</th>
                   <td class="tm-product-name">{{$item->item_name}}</td>
                   <td>${{$item->price}}</td>
-                  <td>{{$item->category_id}}</td>
+                  <td>{{$item->category_name}}</td>
                   <td>{{$item->description}}</td>
                   <td>
                     <span onclick="document.getElementById('m-u-{{$item->id}}').submit()" class="tm-product-delete-link">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Menu;
+use Illuminate\Support\Facades\DB;
 
 class MenuController extends Controller
 {
@@ -15,8 +16,9 @@ class MenuController extends Controller
      */
     public function index()
     {
+        $items = DB::table('menus')->join('categories','menus.category_id', '=', 'categories.id')->select('menus.id','menus.item_name','menus.price','menus.description','categories.category_name')->get();
         $categories = Category::all();
-        $items = Menu::all();
+        //$items = Menu::all();
 		return view('menu', compact('categories','items'));
     }
 
