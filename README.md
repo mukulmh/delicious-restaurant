@@ -1,40 +1,39 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
 # Delicious Restaurant website using Laravel, Bootsrap, MySql
 
 ## Summery
 This is a restaurant website where user can browse through menus and categories. Users also can book table for them. They can give feedback by filling up the contact us form. There is also admin panel for restaurant management purpose. They will have to login with username and password. From admin panel admin can add, delete or update menus items and categories.
 
 ## platform used
-i) Php
-ii) Laravel
-iii) HTML
-iv) Bootstrap
-v) Javascript
-vi) MySql
+i) Php <br>
+ii) Laravel <br>
+iii) HTML <br>
+iv) Bootstrap <br>
+v) Javascript <br>
+vi) MySql <br>
 
 ## Delicious Restaurant Screenshots <br>
 ### Home page
-![alt text](https://i.ibb.co/C1Gvm8L/home.png)<br>
+<a href="https://ibb.co/2n4PWhJ"><img src="https://i.ibb.co/ngJf6mp/home.png" alt="home" border="0"></a>
 ### About page
-![alt text](https://i.ibb.co/YZPLzxs/about.png)<br>
+<a href="https://ibb.co/xHX7pNT"><img src="https://i.ibb.co/YZPLzxs/about.png" alt="about" border="0"></a>
 ### Menu page
-![alt text](https://i.ibb.co/GHNdtpV/menu.png)<br>
+<a href="https://ibb.co/Vw5LQ9v"><img src="https://i.ibb.co/GHNdtpV/menu.png" alt="menu" border="0"></a>
 ### Chefs page
-![alt text](https://i.ibb.co/HK2RrkD/chefs.png)<br>
+<a href="https://ibb.co/L0PBC2z"><img src="https://i.ibb.co/HK2RrkD/chefs.png" alt="chefs" border="0"></a>
 ### Events page
-![alt text](https://i.ibb.co/6Y5vmPw/events.png)<br>
+<a href="https://ibb.co/jhFVTMf"><img src="https://i.ibb.co/6Y5vmPw/events.png" alt="events" border="0"></a>
 ### Gallery page
-![alt text](https://i.ibb.co/NKMNWkP/gallery.png)<br>
-### Contact Us page
-![alt text](https://i.ibb.co/GRT1gpY/contactus.png)<br>
+<a href="https://ibb.co/tD92YNt"><img src="https://i.ibb.co/NKMNWkP/gallery.png" alt="gallery" border="0"></a>
+### Special page
+<a href="https://ibb.co/R7mTZrs"><img src="https://i.ibb.co/nRvMZdY/specials.png" alt="specials" border="0"></a>
 ### Booking page
-![alt text](https://i.ibb.co/chsJjMb/booking.png)<br>
+<a href="https://ibb.co/s9XjZk5"><img src="https://i.ibb.co/chsJjMb/booking.png" alt="booking" border="0"></a>
 ### Admin login
-![alt text](https://i.ibb.co/Y2V2yc5/adminlogin.png)<br>
+<a href="https://ibb.co/jhjhWyC"><img src="https://i.ibb.co/Y2V2yc5/adminlogin.png" alt="adminlogin" border="0"></a>
 ### Admin panel
-![alt text](https://i.ibb.co/1qjJcc6/adminpanel.png)<br>
+<a href="https://ibb.co/J7gFZZQ"><img src="https://i.ibb.co/1qjJcc6/adminpanel.png" alt="adminpanel" border="0"></a>
 ### Add item
-![alt text](https://i.ibb.co/Vt7gr2g/add-item.png)<br>
+<a href="https://ibb.co/BtXydqy"><img src="https://i.ibb.co/Vt7gr2g/add-item.png" alt="add-item" border="0"></a>
 ### Edit category
-![alt text](https://i.ibb.co/v1QFw9b/edit-category.png)<br>
+<a href="https://ibb.co/kK97HZp"><img src="https://i.ibb.co/2qs9nJw/edit-category.png" alt="edit-category" border="0"></a>
+
