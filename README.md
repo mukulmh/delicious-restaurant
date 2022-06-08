@@ -13,28 +13,28 @@ iv) Bootstrap
 v) Javascript
 vi) MySql
 
-##Delicious Restaurant Screenshots
+##Delicious Restaurant Screenshots <br>
 ###Home page
-![alt text](https://i.ibb.co/ngJf6mp/home.png)
+![alt text](https://i.ibb.co/ngJf6mp/home.png)<br>
 ###About page
-![alt text](https://i.ibb.co/YZPLzxs/about.png)
+![alt text](https://i.ibb.co/YZPLzxs/about.png)<br>
 ###Menu page
-![alt text](https://i.ibb.co/GHNdtpV/menu.png)
+![alt text](https://i.ibb.co/GHNdtpV/menu.png)<br>
 ###Chefs page
-![alt text](https://i.ibb.co/HK2RrkD/chefs.png)
+![alt text](https://i.ibb.co/HK2RrkD/chefs.png)<br>
 ###Events page
-![alt text](https://i.ibb.co/6Y5vmPw/events.png)
+![alt text](https://i.ibb.co/6Y5vmPw/events.png)<br>
 ###Gallery page
-![alt text](https://i.ibb.co/NKMNWkP/gallery.png)
+![alt text](https://i.ibb.co/NKMNWkP/gallery.png)<br>
 ###Contact Us page
-![alt text](https://i.ibb.co/GRT1gpY/contactus.png)
+![alt text](https://i.ibb.co/GRT1gpY/contactus.png)<br>
 ###Booking page
-![alt text](https://i.ibb.co/chsJjMb/booking.png)
+![alt text](https://i.ibb.co/chsJjMb/booking.png)<br>
 ###Admin login
-![alt text](https://i.ibb.co/Y2V2yc5/adminlogin.png)
+![alt text](https://i.ibb.co/Y2V2yc5/adminlogin.png)<br>
 ###Admin panel
-![alt text](https://i.ibb.co/1qjJcc6/adminpanel.png)
+![alt text](https://i.ibb.co/1qjJcc6/adminpanel.png)<br>
 ###Add item
-![alt text](https://i.ibb.co/Vt7gr2g/add-item.png)
+![alt text](https://i.ibb.co/Vt7gr2g/add-item.png)<br>
 ###Edit category
-![alt text](https://i.ibb.co/2qs9nJw/edit-category.png)
+![alt text](https://i.ibb.co/2qs9nJw/edit-category.png)<br>
