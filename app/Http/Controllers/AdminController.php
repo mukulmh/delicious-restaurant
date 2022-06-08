@@ -16,7 +16,8 @@ class AdminController extends Controller
         $items = DB::table('menus')->join('categories','menus.category_id', '=', 'categories.id')->select('menus.id','menus.item_name','menus.price','menus.description','categories.category_name')->get();
         //$items = Menu::all();
         $categories = Category::all();
-        return view('admin/index', compact('items', 'categories'));
+        $users = User::all();
+        return view('admin/index', compact('items', 'categories', 'users'));
     }
 
     public function loginview()

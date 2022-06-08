@@ -86,8 +86,8 @@ class ItemController extends Controller
     public function destroy($id)
     {
         $data = Menu::find($id);
-        dd($data);
-        // $data->delete();
-        // return redirect()->back();
+        //dd($data);
+        $data->delete();
+        return redirect()->back();
     }
 }
