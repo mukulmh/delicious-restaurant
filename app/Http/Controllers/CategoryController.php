@@ -36,7 +36,8 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         Category::create($request->all());
-        return redirect('/admin');
+        // return redirect('/admin');
+        return redirect('/admin')->with(['message'=>'Category added successfully!']);
     }
 
     /**
@@ -85,6 +86,6 @@ class CategoryController extends Controller
         $data = Category::find($id);
         //dd($data);
         $data->delete();
-        return redirect()->back();
+        return redirect()->back()->with(['message'=>'Category deleted successfully!']);
     }
 }

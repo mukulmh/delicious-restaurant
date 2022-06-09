@@ -45,7 +45,12 @@
         </ul>
       </div>
     </div>
-  </nav> 
+  </nav>
+  <div class="container mt-2 tm-block-message">
+    @if(Session::has('message'))
+    <p>{{Session::get('message')}}</p>
+    @endif
+  </div>
   <div class="container mt-5">
     <div class="row tm-content-row">
       <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
@@ -157,4 +162,3 @@
   </script>
 </body>
 @endsection
-

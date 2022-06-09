@@ -95,6 +95,12 @@ button:focus {
   color: #fff;
   margin-bottom: 30px;
 }
+.tm-block-message {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: greenyellow;
+  margin-bottom: 30px;
+}
 .nav-link {
   color: #fff;
   height: 100%;

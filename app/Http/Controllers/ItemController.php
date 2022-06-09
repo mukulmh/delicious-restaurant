@@ -39,8 +39,7 @@ class ItemController extends Controller
     public function store(Request $request)
     {
         Menu::Create($request->all());
-        $categories = Category::all();
-        return view('admin/add-item',compact('categories'));
+        return redirect('/admin')->with(['message'=>'Item added successfully!']);
     }
 
     /**
@@ -88,6 +87,6 @@ class ItemController extends Controller
         $data = Menu::find($id);
         //dd($data);
         $data->delete();
-        return redirect()->back();
+        return redirect()->back()->with(['message'=>'Item deleted successfully!']);
     }
 }
