@@ -13,8 +13,8 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $items = DB::table('menus')->join('categories','menus.category_id', '=', 'categories.id')->select('menus.id','menus.item_name','menus.price','menus.description','categories.category_name')->get();
-        //$items = Menu::all();
+        //$items = DB::table('menus')->join('categories','menus.category_id', '=', 'categories.id')->select('menus.id','menus.item_name','menus.price','menus.description','categories.category_name')->get();
+        $items = Menu::all();
         $categories = Category::all();
         $users = User::all();
         return view('admin/index', compact('items', 'categories', 'users'));
